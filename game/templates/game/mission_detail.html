@@ -10,9 +10,16 @@
 </p>
     
 <table class="table">
+    <tr><td>wrong_answer</td><td>{{ object.wrong_answer }}</td></tr>
     <tr><td>last_updated</td><td>{{ object.last_updated }}</td></tr>
+    <tr><td>right_answer</td><td>{{ object.right_answer }}</td></tr>
+    <tr><td>question</td><td>{{ object.question }}</td></tr>
+    <tr><td>response</td><td>{{ object.response }}</td></tr>
     <tr><td>created</td><td>{{ object.created }}</td></tr>
+    <tr><td>score</td><td>{{ object.score }}</td></tr>
     <tr><td>name</td><td>{{ object.name }}</td></tr>
+    <tr><td>did_you_know</td><td>{{ object.did_you_know }}</td></tr>
+    <tr><td>event</td><td>{{ object.event }}</td></tr>
 </table>
 <a class="btn btn-primary" href="{{object.get_update_url}}">Edit</a>
 

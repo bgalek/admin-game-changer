@@ -13,10 +13,34 @@
   {% csrf_token %}
   {{form.errors}}
   <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="wrong_answer">wrong_answer: </label>
+      <input class="form-control col-sm-10"'
+         id="wrong_answer" type="text"
+         name="wrong_answer" value="{{ object.wrong_answer }}">
+  </div>
+  <div class="form-group row">
       <label class="col-sm-2 col-form-label" for="last_updated">last_updated: </label>
       <input class="form-control col-sm-10"
          id="last_updated" type="datetime-local"
          name="last_updated" value="{{ object.last_updated }}" disabled>
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="right_answer">right_answer: </label>
+      <input class="form-control col-sm-10"'
+         id="right_answer" type="text"
+         name="right_answer" value="{{ object.right_answer }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="question">question: </label>
+      <input class="form-control col-sm-10"'
+         id="question" type="text"
+         name="question" value="{{ object.question }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="response">response: </label>
+      <input class="form-control col-sm-10"'
+         id="response" type="text"
+         name="response" value="{{ object.response }}">
   </div>
   <div class="form-group row">
       <label class="col-sm-2 col-form-label" for="created">created: </label>
@@ -25,10 +49,26 @@
          name="created" value="{{ object.created }}" disabled>
   </div>
   <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="score">score: </label>
+      <input class="form-control col-sm-10"'
+         id="score" type="number"
+         name="score" value="{{ object.score }}">
+  </div>
+  <div class="form-group row">
       <label class="col-sm-2 col-form-label" for="name">name: </label>
       <input class="form-control col-sm-10"'
          id="name" type="text"
          name="name" value="{{ object.name }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="did_you_know">did_you_know: </label>
+      <input class="form-control col-sm-10"'
+         id="did_you_know" type="text"
+         name="did_you_know" value="{{ object.did_you_know }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="event">event: </label>
+      {{ form.event }}
   </div>
   <input type="submit" value="Save" class="btn btn-primary">
 </form>

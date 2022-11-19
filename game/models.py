@@ -6,9 +6,9 @@ class Event(models.Model):
 
     # Fields
     created = models.DateTimeField(auto_now_add=True, editable=False)
-    start_date = models.DateTimeField()
     last_updated = models.DateTimeField(auto_now=True, editable=False)
     end_date = models.DateTimeField()
+    start_date = models.DateTimeField()
 
     class Meta:
         pass
@@ -26,10 +26,19 @@ class Event(models.Model):
 
 class Mission(models.Model):
 
+    # Relationships
+    event = models.ForeignKey("game.Event", on_delete=models.CASCADE)
+
     # Fields
+    wrong_answer = models.TextField(max_length=200)
     last_updated = models.DateTimeField(auto_now=True, editable=False)
+    right_answer = models.TextField(max_length=200)
+    question = models.TextField(max_length=200)
+    response = models.TextField(max_length=200)
     created = models.DateTimeField(auto_now_add=True, editable=False)
+    score = models.IntegerField()
     name = models.CharField(max_length=50)
+    did_you_know = models.TextField(max_length=200)
 
     class Meta:
         pass

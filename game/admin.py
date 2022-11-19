@@ -15,15 +15,15 @@ class EventAdmin(admin.ModelAdmin):
     form = EventAdminForm
     list_display = [
         "created",
-        "start_date",
         "last_updated",
         "end_date",
+        "start_date",
     ]
     readonly_fields = [
         "created",
-        "start_date",
         "last_updated",
         "end_date",
+        "start_date",
     ]
 
 
@@ -37,14 +37,26 @@ class MissionAdminForm(forms.ModelForm):
 class MissionAdmin(admin.ModelAdmin):
     form = MissionAdminForm
     list_display = [
+        "wrong_answer",
         "last_updated",
+        "right_answer",
+        "question",
+        "response",
         "created",
+        "score",
         "name",
+        "did_you_know",
     ]
     readonly_fields = [
+        "wrong_answer",
         "last_updated",
+        "right_answer",
+        "question",
+        "response",
         "created",
+        "score",
         "name",
+        "did_you_know",
     ]
 
 
