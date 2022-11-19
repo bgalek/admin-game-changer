@@ -34,7 +34,7 @@ else:
 if not IS_HEROKU:
     DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['bgk-app-admin.herokuapp.com']
 
 # Application definition
 INSTALLED_APPS = [
