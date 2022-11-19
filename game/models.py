@@ -5,6 +5,7 @@ from django.urls import reverse
 class Event(models.Model):
 
     # Fields
+    name = models.CharField(max_length=100)
     created = models.DateTimeField(auto_now_add=True, editable=False)
     last_updated = models.DateTimeField(auto_now=True, editable=False)
     end_date = models.DateTimeField()

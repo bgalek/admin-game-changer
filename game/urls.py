@@ -1,9 +1,12 @@
 from django.urls import path, include
 from rest_framework import routers
+from django.contrib import admin
 
 from . import api
 from . import views
 
+admin.site.site_header = 'BGK Game Admin Panel'
+admin.site.site_title = 'BGK Game Panel'
 
 router = routers.DefaultRouter()
 router.register("Event", api.EventViewSet)

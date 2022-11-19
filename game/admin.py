@@ -14,6 +14,7 @@ class EventAdminForm(forms.ModelForm):
 class EventAdmin(admin.ModelAdmin):
     form = EventAdminForm
     list_display = [
+        "name",
         "created",
         "last_updated",
         "end_date",
